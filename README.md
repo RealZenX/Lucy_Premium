@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="" alt="TG_BOTZ Logo">
+  <img src="https://graph.org/file/8e0fca27184354f479593.jpg" alt="TG_BOTZ Logo">
 </p>
 <h1 align="center">
   TG_UPDATES1
