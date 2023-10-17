@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQue
 from pyrogram.handlers import MessageHandler
 from pyshorteners import Shortener
 
-MONEYKAMALO_API = os.environ.get("MONEYKAMALO_API", "c709b21b7fc8f59921307c73e6abb6f7a2bbf53c")
+SHAREUS_API = os.environ.get("SHAREUS_API", "1Jh0re6olVUHnr3eEyFG7NZX7RF3")
 
 reply_markup = InlineKeyboardMarkup(
         [[
@@ -51,13 +51,13 @@ async def short(link):
     shorten_urls = "**--Shorted URLs--**\n"
     
     # Bit.ly shorten
-    if MONEYKAMALO_API:
+    if SHAREUS_API:
         try:
-            s = Shortener(api_key=MONEYKAMALO_API)
-            url = s.moneykamalo.short(link)
-            shorten_urls += f"\n**moneykamalo :-** {url}"
+            s = Shortener(api_key=SHAREUS_API)
+            url = s.shareus.io(link)
+            shorten_urls += f"\n**shareus :-** {url}"
         except Exception as error:
-            print(f"moneykamalo error :- {error}")
+            print(f"shareus error :- {error}")
 
     
     # Send the text
